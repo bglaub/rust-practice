@@ -1,7 +1,6 @@
 [package]
-name = "problem_2"
+name = "euler"
 version = "0.1.0"
 authors = ["bglaub <blakeglaub@gmail.com>"]
 
 [dependencies]
-euler = { path = "../euler" }
