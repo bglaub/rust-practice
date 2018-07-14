@@ -15,21 +15,16 @@ impl Primes {
             is_prime.push(true);
         }
 
-        for i in 2..limit {
-            if is_prime[i] {
-                let mut j = 2 * i;
-                while j < limit {
-                    is_prime[j] = false;
-                    j += i;
-                }
-            }
-        }
-
         let mut list : Vec<usize> = Vec::new();
 
         for i in 2..limit {
             if is_prime[i] {
                 list.push(i);
+                let mut j = 2 * i;
+                while j < limit {
+                    is_prime[j] = false;
+                    j += i;
+                }
             }
         }
         
